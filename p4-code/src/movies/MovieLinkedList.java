@@ -1,12 +1,13 @@
 /**
- * MovieLinkedList is a class that implements the MovieList interface using a LinkedList.
- * It provides methods to add, remove, and filter movies.
+ * MovieLinkedList is a class that implements the MovieList interface using a LinkedList. It
+ * provides methods to add, remove, and filter movies.
  */
 package movies;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
-public class MovieLinkedList implements MovieList {
+public class MovieLinkedList implements MovieList, Iterable<Movie> {
 
   private LinkedList<Movie> movies;
 
@@ -64,7 +65,7 @@ public class MovieLinkedList implements MovieList {
     return result;
   }
 
-/**
+  /**
    * Filters the movies in the list based on the director.
    *
    * @param director the director to filter the movies
@@ -88,6 +89,46 @@ public class MovieLinkedList implements MovieList {
    */
   public int size() {
     return movies.size();
+  }
+
+  /**
+   * Sorts the movies using the Insertion Sort algorithm.
+   * This method invokes the private insertionSort method to perform the sorting operation.
+   */
+  public void insertionSort() {
+    insertionSort(movies);
+  }
+
+  /**
+   * Performs Insertion Sort on the provided linked list of movies.
+   * Insertion Sort is used to sort the movies based on their natural ordering (compareTo method).
+   *
+   * @param list the linked list of movies to be sorted
+   */
+  private void insertionSort(LinkedList<Movie> list) {
+    int n = list.size();
+    for (int i = 1; i < n; ++i) {
+      Movie key = list.get(i);
+      int j = i - 1;
+
+      // Move elements of list[0..i-1] that are greater than key
+      // to one position ahead of their current position
+      while (j >= 0 && key.compareTo(list.get(j)) < 0) {
+        list.set(j + 1, list.get(j));
+        j = j - 1;
+      }
+      list.set(j + 1, key);
+    }
+  }
+
+  /**
+   * Returns an iterator over the movies in this MovieLinkedList in proper sequence.
+   *
+   * @return an iterator over the movies in this list in proper sequence
+   */
+  @Override
+  public Iterator<Movie> iterator() {
+    return movies.iterator();
   }
 
 }

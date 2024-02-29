@@ -62,24 +62,33 @@ public class Movie implements Comparable<Movie> {
   }
 
   /**
-   * Compares this movie to another movie. The comparison is based on the title, director and year
-   * of release.
+   * Compares this movie to another movie based on title, director, and year of release. The
+   * comparison is performed in the following order: Title: Titles are compared in a
+   * case-insensitive manner. Director: Director names are compared in a case-insensitive manner.
+   * Year: Release years are compared.
    *
    * @param o the movie to compare to
-   * @return -1 if the movies are not equal, 0 if the movies are equal
+   * @return a negative integer, zero, or a positive integer if this movie is less than, equal to,
+   * or greater than the specified movie based on the defined criteria.
    */
-
   @Override
   public int compareTo(Movie o) {
-    if (this.getTitle().compareTo(o.getTitle()) != 0) {
-      return -1;
-    } else if (this.getDirector().getFirstName().compareTo(o.getDirector().getFirstName()) != 0 &&
-        this.getDirector().getLastName().compareTo(o.getDirector().getLastName()) != 0) {
-      return -1;
-    } else if (this.getYear() != o.getYear()) {
-      return -1;
+    // Compare based on title
+    int titleComparison = this.getTitle().compareToIgnoreCase(o.getTitle());
+    if (titleComparison != 0) {
+      //System.out.println("Title comparison: " + titleComparison);
+      return titleComparison;
     }
-    return 0;
+
+    // If titles are the same, compare based on director's name
+    int directorComparison = this.getDirector().toString()
+        .compareToIgnoreCase(o.getDirector().toString());
+    if (directorComparison != 0) {
+      return directorComparison;
+    }
+
+    // If titles and director names are the same, compare based on year
+    return Integer.compare(this.getYear(), o.getYear());
   }
 
 }

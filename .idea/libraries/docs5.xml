@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="docs5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/P2-Vector/docs/type-search-index.zip!/" />
+      <root url="jar://$PROJECT_DIR$/P2-Vector/docs/package-search-index.zip!/" />
+      <root url="jar://$PROJECT_DIR$/P2-Vector/docs/member-search-index.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

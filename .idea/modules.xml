@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/A Custom Date/A Custom Date.iml" filepath="$PROJECT_DIR$/A Custom Date/A Custom Date.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CS-5010.iml" filepath="$PROJECT_DIR$/.idea/CS-5010.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW3/HW3.iml" filepath="$PROJECT_DIR$/HW3/HW3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L4-code/L4-code.iml" filepath="$PROJECT_DIR$/L4-code/L4-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L5/L5.iml" filepath="$PROJECT_DIR$/L5/L5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab-1/Lab-1.iml" filepath="$PROJECT_DIR$/Lab-1/Lab-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab-3/Lab-3.iml" filepath="$PROJECT_DIR$/Lab-3/Lab-3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/P2-Vector/P2-Vector.iml" filepath="$PROJECT_DIR$/P2-Vector/P2-Vector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/P5/P5.iml" filepath="$PROJECT_DIR$/P5/P5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw1/hw1.iml" filepath="$PROJECT_DIR$/hw1/hw1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw2.0/hw2.0.iml" filepath="$PROJECT_DIR$/hw2.0/hw2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p4-code/p4-code.iml" filepath="$PROJECT_DIR$/p4-code/p4-code.iml" />
+    </modules>
+  </component>
+</project>
