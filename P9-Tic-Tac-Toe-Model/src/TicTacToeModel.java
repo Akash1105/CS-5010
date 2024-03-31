@@ -1,6 +1,9 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * The type Tic tac toe model.
+ */
 public class TicTacToeModel implements TicTacToe {
 
   private Player[][] board;
@@ -8,6 +11,9 @@ public class TicTacToeModel implements TicTacToe {
   private boolean gameOver;
   private Player winner;
 
+  /**
+   * Instantiates a new Tic tac toe model.
+   */
   public TicTacToeModel() {
     // Initialize the board
     board = new Player[3][3];
@@ -53,6 +59,12 @@ public class TicTacToeModel implements TicTacToe {
     return false;
   }
 
+  /**
+   * Move.
+   *
+   * @param r the r
+   * @param c the c
+   */
   @Override
   public void move(int r, int c) {
     // Check if the game is over
@@ -78,26 +90,54 @@ public class TicTacToeModel implements TicTacToe {
 
   }
 
+  /**
+   * Gets turn.
+   *
+   * @return the turn
+   */
   @Override
   public Player getTurn() {
     return turn;
   }
 
+  /**
+   * Is game over boolean.
+   *
+   * @return the boolean
+   */
   @Override
   public boolean isGameOver() {
     return gameOver;
   }
 
+  /**
+   * Gets winner.
+   *
+   * @return the winner
+   */
   @Override
   public Player getWinner() {
     return winner;
   }
 
+  /**
+   * Get board player [ ] [ ].
+   *
+   * @return the player [ ] [ ]
+   */
   @Override
   public Player[][] getBoard() {
     return board;
   }
 
+  /**
+   * Gets mark at.
+   *
+   * @param r the r
+   * @param c the c
+   * @return the mark at
+   * @throws IllegalArgumentException the illegal argument exception
+   */
   @Override
   public Player getMarkAt(int r, int c) throws IllegalArgumentException {
     if (r < 0 || r >= 3 || c < 0 || c >= 3)
@@ -105,6 +145,11 @@ public class TicTacToeModel implements TicTacToe {
     return board[r][c];
   }
 
+  /**
+   * To string string.
+   *
+   * @return the string
+   */
   @Override
   public String toString() {
     // Using Java stream API to save code:

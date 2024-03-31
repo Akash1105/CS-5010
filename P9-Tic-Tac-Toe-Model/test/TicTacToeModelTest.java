@@ -14,12 +14,18 @@ public class TicTacToeModelTest {
 
   private TicTacToe ttt1 = new TicTacToeModel();
 
+  /**
+   * Test move.
+   */
   @Test
   public void testMove() {
     ttt1.move(0, 0);
     assertEquals(Player.O, ttt1.getTurn());
   }
 
+  /**
+   * Test horizontal win.
+   */
   @Test
   public void testHorizontalWin() {
     ttt1.move(0, 0); // X takes upper left
@@ -38,6 +44,9 @@ public class TicTacToeModelTest {
         + " O |   |  ", ttt1.toString());
   }
 
+  /**
+   * Test diagonal win.
+   */
   @Test
   public void testDiagonalWin() {
     diagonalWinHelper();
@@ -62,6 +71,9 @@ public class TicTacToeModelTest {
     ttt1.move(0, 2); // O takes upper right
   }
 
+  /**
+   * Test invalid move.
+   */
   @Test
   public void testInvalidMove() {
     ttt1.move(0, 0);
@@ -83,12 +95,18 @@ public class TicTacToeModelTest {
     }
   }
 
+  /**
+   * Test move attempt after game over.
+   */
   @Test(expected = IllegalStateException.class)
   public void testMoveAttemptAfterGameOver() {
     diagonalWinHelper();
     ttt1.move(2, 2); // 2,2 is an empty position
   }
 
+  /**
+   * Test cats game.
+   */
   @Test
   public void testCatsGame() {
     ttt1.move(0, 0);
@@ -111,16 +129,25 @@ public class TicTacToeModelTest {
         + " X | X | O", ttt1.toString());
   }
 
+  /**
+   * Test invalid get mark at row.
+   */
   @Test(expected = IllegalArgumentException.class)
   public void testInvalidGetMarkAtRow() {
     ttt1.getMarkAt(-12, 0);
   }
 
+  /**
+   * Test invalid get mark at col.
+   */
   @Test(expected = IllegalArgumentException.class)
   public void testInvalidGetMarkAtCol() {
     ttt1.getMarkAt(0, -30);
   }
 
+  /**
+   * Test get board.
+   */
   @Test
   public void testGetBoard() {
     diagonalWinHelper();
@@ -143,6 +170,9 @@ public class TicTacToeModelTest {
 
   // TODO: test case where board is full AND there is a winner
 
+  /**
+   * Test full board with winner.
+   */
   @Test
   public void testFullBoardWithWinner() {
     //Moves to fill the board and let X win on the last move
