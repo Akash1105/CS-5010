@@ -59,6 +59,14 @@ public class TicTacToeModel implements TicTacToe {
     return false;
   }
 
+  private Player[][] copyBoard(Player[][] board) {
+    Player[][] copy = new Player[3][3];
+    for (int i = 0; i < 3; i++) {
+      System.arraycopy(board[i], 0, copy[i], 0, 3);
+    }
+    return copy;
+  }
+
   /**
    * Move.
    *
@@ -127,7 +135,7 @@ public class TicTacToeModel implements TicTacToe {
    */
   @Override
   public Player[][] getBoard() {
-    return board;
+    return copyBoard(board);
   }
 
   /**

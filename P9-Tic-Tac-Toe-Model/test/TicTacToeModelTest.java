@@ -146,7 +146,7 @@ public class TicTacToeModelTest {
   }
 
   /**
-   * Test get board.
+   * Test getBoard(). It provides a copy of the game board to avoid modifying the internal representation.
    */
   @Test
   public void testGetBoard() {
@@ -163,9 +163,9 @@ public class TicTacToeModelTest {
     bd[2][0] = Player.X;  // mutate
     // check correct post conditions
     System.out.println(ttt1.getMarkAt(2, 0));
-    assertEquals(Player.X, ttt1.getMarkAt(2, 0));
+    assertEquals(Player.O, ttt1.getMarkAt(2, 0));
     Player[][] bd2 = ttt1.getBoard();
-    assertEquals(Player.X, bd2[2][0]);
+    assertEquals(Player.O, bd2[2][0]);
   }
 
   // TODO: test case where board is full AND there is a winner
