@@ -59,6 +59,7 @@ public class TicTacToeModel implements TicTacToe {
     return false;
   }
 
+  // Helper method to copy the board
   private Player[][] copyBoard(Player[][] board) {
     Player[][] copy = new Player[3][3];
     for (int i = 0; i < 3; i++) {
