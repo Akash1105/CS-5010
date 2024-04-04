@@ -1,9 +1,11 @@
+package tictactoe;
+
 /**
- * The enum Player.
+ * The enum tictactoe.Player.
  */
 public enum Player {
   /**
-   * The Player X.
+   * The tictactoe.Player X.
    */
   X {
     @Override
@@ -12,7 +14,7 @@ public enum Player {
     }
   },
   /**
-   * The Player O.
+   * The tictactoe.Player O.
    */
   O {
     @Override

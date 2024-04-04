@@ -1,3 +1,5 @@
+package tictactoe;
+
 import static org.junit.Assert.assertEquals;
 
 import static org.junit.Assert.assertTrue;
@@ -6,6 +8,11 @@ import java.io.StringReader;
 import java.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
+import tictactoe.FailingAppendable;
+import tictactoe.TicTacToe;
+import tictactoe.TicTacToeConsoleController;
+import tictactoe.TicTacToeController;
+import tictactoe.TicTacToeModel;
 
 /**
  * Test cases for the tic tac toe controller, using mocks for readable and appendable.
@@ -276,8 +283,8 @@ public class TicTacToeControllerTest {
   public void testTieGame() {
     TicTacToe m = new TicTacToeModel();
     // note the entire sequence of user inputs for the entire game is in this one string:
-    //StringReader input = new StringReader("2 2 1 1 3 3 1 2 1 3 2 3 2 1 3 1 3 2 q");
-    StringReader input = new StringReader("1 1 0 0 2 2 0 1 0 2 1 2 1 0 2 0 2 1 q");
+    StringReader input = new StringReader("2 2 1 1 3 3 1 2 1 3 2 3 2 1 3 1 3 2 q");
+    //StringReader input = new StringReader("1 1 0 0 2 2 0 1 0 2 1 2 1 0 2 0 2 1 q");
     StringBuilder gameLog = new StringBuilder();
     TicTacToeController c = new TicTacToeConsoleController(input, gameLog);
     c.playGame(m);

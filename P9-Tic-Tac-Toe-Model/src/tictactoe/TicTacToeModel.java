@@ -1,5 +1,9 @@
+package tictactoe;
+
 import java.util.*;
 import java.util.stream.Collectors;
+import tictactoe.Player;
+import tictactoe.TicTacToe;
 
 /**
  * The type Tic tac toe model.
@@ -17,7 +21,7 @@ public class TicTacToeModel implements TicTacToe {
   public TicTacToeModel() {
     // Initialize the board
     board = new Player[3][3];
-    // Player X starts the game
+    // tictactoe.Player X starts the game
     turn = Player.X;
     // Game starts with no winner and not over
     gameOver = false;
@@ -170,9 +174,9 @@ public class TicTacToeModel implements TicTacToe {
      //the helpful built-in String.join method.
     /**********
     List<String> rows = new ArrayList<>();
-    for(Player[] row : getBoard()) {
+    for(tictactoe.Player[] row : getBoard()) {
       List<String> rowStrings = new ArrayList<>();
-      for(Player p : row) {
+      for(tictactoe.Player p : row) {
         if(p == null) {
           rowStrings.add(" ");
         } else {

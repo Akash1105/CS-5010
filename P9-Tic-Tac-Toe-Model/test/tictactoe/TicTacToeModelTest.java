@@ -1,4 +1,9 @@
+package tictactoe;
+
 import org.junit.Test;
+import tictactoe.Player;
+import tictactoe.TicTacToe;
+import tictactoe.TicTacToeModel;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

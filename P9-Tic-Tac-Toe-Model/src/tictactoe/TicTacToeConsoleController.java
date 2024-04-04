@@ -1,5 +1,8 @@
+package tictactoe;
+
 import java.io.IOException;
 import java.util.Scanner;
+import tictactoe.TicTacToe;
 
 /**
  * The type Tic tac toe console controller.
@@ -44,7 +47,7 @@ public class TicTacToeConsoleController implements TicTacToeController {
           if (quitGameCheck(col, m)) {
             return;
           }
-          m.move(Integer.parseInt(row) - 0, Integer.parseInt(col) - 0);
+          m.move(Integer.parseInt(row) - 1, Integer.parseInt(col) - 1);
           isLastMoveValid = true;
         } catch (NumberFormatException e) {
           isLastMoveValid = false;
