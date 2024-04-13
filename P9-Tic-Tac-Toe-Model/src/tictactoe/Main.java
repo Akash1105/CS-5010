@@ -1,19 +1,18 @@
 package tictactoe;
 
-import java.io.InputStreamReader;
-
 /**
- * Run a Tic Tac Toe game interactively on the console.
+ * Run a TicTacToe game interactively on the console.
  */
 public class Main {
-
   /**
-   * Run a Tic Tac Toe game interactively on the console.
+   * Run a TicTacToe game interactively on the console.
    *
-   * @param args the input arguments
+   * @param args not used
    */
   public static void main(String[] args) {
-    new TicTacToeConsoleController(new InputStreamReader(System.in),
-        System.out).playGame(new TicTacToeModel());
+    TicTacToe m = new TicTacToeModel();
+    TicTacToeView v = new SwingTicTacToeView("Tic-Tac-Toe");
+    TicTacToeController c = new SwingTicTacToeController(v, m);
+    c.playGame(m);
   }
 }
